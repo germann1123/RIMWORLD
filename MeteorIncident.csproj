@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F95CEE6-C1A4-40CC-AAA8-5168CCBF2269}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MeteorIncident</RootNamespace>
+    <AssemblyName>MeteorIncident</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\v1.1\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedCode\SHelper.cs">
+      <Link>SHelper.cs</Link>
+    </Compile>
+    <Compile Include="CellHelper.cs" />
+    <Compile Include="Common\KongTouHelper.cs" />
+    <Compile Include="Common\PlayerDianDialo.cs" />
+    <Compile Include="Common\ThePawn.cs" />
+    <Compile Include="Common\TradeHelper.cs" />
+    <Compile Include="Common\TuFei.cs" />
+    <Compile Include="Common\WaponCommon.cs" />
+    <Compile Include="Common\WebSocketRecive.cs" />
+    <Compile Include="CustomThreat\HunterHuman.cs" />
+    <Compile Include="GuiHelper\GuiHelper.cs" />
+    <Compile Include="ItemStash_Ger.cs" />
+    <Compile Include="Stations\TheStationNew.cs" />
+    <Compile Include="StoryTeller\QuestHelper.cs" />
+    <Compile Include="StoryTeller\ST.cs" />
+    <Compile Include="StoryTeller\ST1.cs" />
+    <Compile Include="StoryTeller\ST2.cs" />
+    <Compile Include="StoryTeller\STGlobal.cs" />
+    <Compile Include="StoryTeller\StoryTellerManager.cs" />
+    <Compile Include="TheAirDrop.cs" />
+    <Compile Include="TheLighting.cs" />
+    <Compile Include="TheColdSnapGer.cs" />
+    <Compile Include="TheGlobalInfo.cs" />
+    <Compile Include="TheLostResouce.cs" />
+    <Compile Include="TheSeed.cs" />
+    <Compile Include="TheState.cs" />
+    <Compile Include="TheTimer.cs" />
+    <Compile Include="WebSocketHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lib.Harmony.2.1.1\lib\net472\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>DLL13\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>DLL13\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="UnityEngine">
+      <HintPath>DLL13\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>DLL13\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>DLL13\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Dll\websocket-sharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
